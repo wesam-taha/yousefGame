@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=600,user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="css/drag.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script src="js/jquery.drag-drop.plugin.js"></script>
+    <script>
+        $(function() {
+                // First example, A-F.
+                $("#source1").dragdrop({
+                    makeClone: true,
+                    sourceHide: true,
+                    dragClass: "whileDragging",
+                    canDrag: function($src, event) {
+                        $src = $(event.target);
+                        return $src.hasClass("not") ? null:$src;
+                    },
+                    canDrop: function($dst) {
+                        return $dst.attr("id")=="destination" && $dst.children().size()<4;
+                    },
+                });
+
+                // Second example, G-L.
+                $("#source2").dragdrop({
+                    makeClone: true,
+                    sourceHide: true,
+                    dragClass: "whileDragging",
+                    canDrag: function($src, event) {
+                        $src = $(event.target);
+                        return $src.hasClass("not") ? null:$src;
+                    },
+                    canDrop: function($dst) {
+                        return $dst.attr("id")=="destination2" && $dst.children().size()<2;
+                    },
+                });
+
+
+
+            });
+        </script>
+        <style type="text/css">
+          .container { width: 1024px; height: 768px; background-image: url('assests/GAME-5-2.png'); position: relative; left: 0px; top: 0px; }
+      </style>
+
+  </head>
+  <body>
+
+    <div class="container">
+      <img  style="position: absolute; width: 400px; right: -15px; top: 230px;  " src="assests/cow.gif">
+      <div id="source1" class="source boxes">
+        <div><img style="width: 150px; position: fixed; top: 150px; left:  500px;  " src="assests/milk.png"></div>
+        <div><img style="width: 150px; position: fixed; top: 200px; left:  385px;  " src="assests/milk2.png"></div>
+        <div><img style="width: 150px; position: fixed; top: 120px; left:  260px;  " src="assests/cheese.png"></div>
+        <div><img style="width: 150px; position: fixed;  top: 310px; left:  480px; " src="assests/meat2.png"></div>
+    </div>
+    <div id="source2" class="source boxes">
+        <div><img style="width: 150px; position: fixed; top: 336px; left:  260px; " src="assests/egg.png"></div>
+        <div><img style="width: 150px; position: fixed; top: 240px; left:  260px; " src="assests/meat.png"></div>
+
+    </div>
+    
+    <div id="destination" class="drop boxes">
+    </div>
+
+    <div id="destination2" class="drop2 boxes">
+    </div>
+
+</div>
+</body>
+</html>
+
