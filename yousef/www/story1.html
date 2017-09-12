@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html>
 <head>
 
@@ -7,41 +7,39 @@
 
 
 </head>
-<body  style="margin: 0 auto">
+<body ng-app="myApp" ng-controller="MyController" style="margin: 0 auto">
 <div class="container" style=" width: 100%; height: 100%;  position: relative; left: 0px; top: 0px;">
 <img id="loader" style=" position:relative;  width: 100%; left: 0px; top:0px;" src="assests/story1.jpg"/>
 
-<video class="myVideo" id="myVideo-1" width="100%"  preload="auto" autoplay="" poster="assests/story1.jpg" >
+<video ng-show="currentPage == 1" class="myVideo" id="myVideo-1" width="100%"  preload="auto" autoplay="" poster="assests/story1.jpg" >
   <source src="videos/1/1.mp4" type="video/mp4">
 </video>
 
-<video class="myVideo" id="myVideo-2" width="100%"  preload="auto" style="display: none;" >
+<video ng-show="currentPage == 2" class="myVideo" id="myVideo-2" width="100%"  preload="auto"   >
   <source src="videos/1/2.mp4" type="video/mp4">
 </video>
 
-<video class="myVideo" id="myVideo-3" width="100%"  preload="auto" style="display: none;"  >
+<video ng-show="currentPage == 3" class="myVideo" id="myVideo-3" width="100%"  preload="auto"   >
   <source src="videos/1/3.mp4" type="video/mp4">
 </video>
 
-<video class="myVideo" id="myVideo-4" width="100%"  preload="auto" style="display: none;"  >
+<video ng-show="currentPage == 4" class="myVideo" id="myVideo-4" width="100%"  preload="auto"   >
   <source src="videos/1/4.mp4" type="video/mp4">
 </video>
 
-<video class="myVideo" id="myVideo-5" width="100%"  preload="auto" style="display: none;"  >
+<video ng-show="currentPage == 5" class="myVideo" id="myVideo-5" width="100%"  preload="auto"   >
   <source src="videos/1/5.mp4" type="video/mp4">
 </video>
 
-<video class="myVideo" id="myVideo-6" width="100%"  preload="auto" style="display: none;"  >
+<video ng-show="currentPage == 6" class="myVideo" id="myVideo-6" width="100%"  preload="auto"   >
   <source src="videos/1/6.mp4" type="video/mp4">
 </video>
 
 
-<video class="myVideo" id="myVideo-7" width="100%"  preload="auto" style="display: none;"  >
-  <source src="videos/1/7.mp4" type="video/mp4">
-</video>
 
-<img id="left" onclick="goPrev()" style=" position: fixed; width: 7%; cursor: pointer; top: 33%; left: 1%;" src="assests/left.png">
-<img id="right" onclick="goNext()" style="position: fixed; width: 7%; cursor: pointer; top: 33%; right: 1%;" src="assests/right.png">
+
+<img ng-show="currentPage <= 6 && currentPage > 1" ng-click="goPrev()" style=" position: fixed; width: 7%; cursor: pointer; top: 33%; left: 1%;" src="assests/left.png">
+<img  ng-show="currentPage > 0 && currentPage < 6" ng-click="goNext()" style="position: fixed; width: 7%; cursor: pointer; top: 33%; right: 1%;" src="assests/right.png">
 
 
 
@@ -77,34 +75,33 @@ and (max-device-width : 1000px)  { html { zoom:0.6; } }
 
 
 <script src='js/jquery.min.js'></script>
+<script src='js/angular.min.js'></script>
+
+
 <script src="js/preloadjs-0.6.2.min.js"></script>
 
 
 <script type="text/javascript">
 
-var currentPage = 1;
-	if(currentPage == 1 ){ $('#left').hide(); }else{ $('#left').show(); }
-	function goPrev(){ 
-		if(currentPage > 1){ currentPage --; $('#left').show(); 
-		$('.myVideo').hide(); 
-		$('#myVideo-'+currentPage).show(); 
-		$('#myVideo-'+currentPage)[0].play(); 
-		}
-		if(currentPage == 6 ){ $('#right').hide(); }else{ $('#right').show(); }
-		if(currentPage == 1 ){ $('#left').hide(); }else{ $('#left').show(); }
-	}
+var sampleApp = {};
+
+sampleApp.angular = angular.module('myApp', [])
+
+sampleApp.angular.controller('MyController', function($scope) {
+$scope.currentPage = 1;
+
+$scope.goPrev = function (){ 
+if($scope.currentPage > 1 && $scope.currentPage <= 6 ){ $scope.currentPage --; }
+}
 
 
-	function goNext(){ 
-		if(currentPage < 7){ currentPage ++; $('#right').show();
-		$('.myVideo').hide(); 
-		$('#myVideo-'+currentPage).show(); 
-		$('#myVideo-'+currentPage)[0].play(); 
-		}
-		if(currentPage == 1 ){ $('#left').hide(); }else{ $('#left').show(); }
-		if(currentPage == 6 ){ $('#right').hide(); }else{ $('#right').show(); }
-		console.log(currentPage);
-	}
+$scope.goNext = function (){ 
+if($scope.currentPage < 6 && $scope.currentPage > 0 ){ $scope.currentPage ++ ; }
+}
+
+
+});
+
 
 
 
