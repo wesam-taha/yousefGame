@@ -10,13 +10,38 @@
 <body  style="margin: 0 auto">
 <div class="container" style=" width: 100%; height: 100%;  position: relative; left: 0px; top: 0px;">
 <img id="loader" style=" position:relative;  width: 100%; left: 0px; top:0px;" src="assests/story1.jpg"/>
-<video id="myVideo"  width="100%"  preload="auto" autoplay="" poster="assests/story1.jpg" >
+
+<video class="myVideo" id="myVideo-1" width="100%"  preload="auto" autoplay="" poster="assests/story1.jpg" >
   <source src="videos/1/1.mp4" type="video/mp4">
 </video>
 
+<video class="myVideo" id="myVideo-2" width="100%"  preload="auto" style="display: none;" >
+  <source src="videos/1/2.mp4" type="video/mp4">
+</video>
 
-<img id="left" onclick="goPrev()" style=" position: absolute; width: 7%; cursor: pointer; top: 33%; left: 1%;" src="assests/left.png">
-<img id="right" onclick="goNext()" style="position: absolute; width: 7%; cursor: pointer; top: 33%; right: 1%;" src="assests/right.png">
+<video class="myVideo" id="myVideo-3" width="100%"  preload="auto" style="display: none;"  >
+  <source src="videos/1/3.mp4" type="video/mp4">
+</video>
+
+<video class="myVideo" id="myVideo-4" width="100%"  preload="auto" style="display: none;"  >
+  <source src="videos/1/4.mp4" type="video/mp4">
+</video>
+
+<video class="myVideo" id="myVideo-5" width="100%"  preload="auto" style="display: none;"  >
+  <source src="videos/1/5.mp4" type="video/mp4">
+</video>
+
+<video class="myVideo" id="myVideo-6" width="100%"  preload="auto" style="display: none;"  >
+  <source src="videos/1/6.mp4" type="video/mp4">
+</video>
+
+
+<video class="myVideo" id="myVideo-7" width="100%"  preload="auto" style="display: none;"  >
+  <source src="videos/1/7.mp4" type="video/mp4">
+</video>
+
+<img id="left" onclick="goPrev()" style=" position: fixed; width: 7%; cursor: pointer; top: 33%; left: 1%;" src="assests/left.png">
+<img id="right" onclick="goNext()" style="position: fixed; width: 7%; cursor: pointer; top: 33%; right: 1%;" src="assests/right.png">
 
 
 
@@ -61,10 +86,10 @@ var currentPage = 1;
 	if(currentPage == 1 ){ $('#left').hide(); }else{ $('#left').show(); }
 	function goPrev(){ 
 		if(currentPage > 1){ currentPage --; $('#left').show(); 
-
-		$('#myVideo').fadeOut('fast').attr("src","videos/1/"+currentPage+".mp4").fadeIn('fast'); 
-
-		 }
+		$('.myVideo').hide(); 
+		$('#myVideo-'+currentPage).show(); 
+		$('#myVideo-'+currentPage)[0].play(); 
+		}
 		if(currentPage == 6 ){ $('#right').hide(); }else{ $('#right').show(); }
 		if(currentPage == 1 ){ $('#left').hide(); }else{ $('#left').show(); }
 	}
@@ -72,10 +97,10 @@ var currentPage = 1;
 
 	function goNext(){ 
 		if(currentPage < 7){ currentPage ++; $('#right').show();
-
-		$('#myVideo').attr("src","videos/1/"+currentPage+".mp4").fadeIn('slow'); 
-
-		  }
+		$('.myVideo').hide(); 
+		$('#myVideo-'+currentPage).show(); 
+		$('#myVideo-'+currentPage)[0].play(); 
+		}
 		if(currentPage == 1 ){ $('#left').hide(); }else{ $('#left').show(); }
 		if(currentPage == 6 ){ $('#right').hide(); }else{ $('#right').show(); }
 		console.log(currentPage);
