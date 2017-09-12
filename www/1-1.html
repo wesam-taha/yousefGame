@@ -1,5 +1,9 @@
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<!DOCTYPE>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
+</head>
 
 <div class="container">
   <div id="textHolder">
@@ -34,8 +38,14 @@
 </div>
 
 <style id="jsbin-css">
-  body{ margin: 0; }
-  .container { width: 1024px; height: 768; background-image: url('assests/1-1bg.png'); position: relative; left: 0px; top: 0px; }
+
+@media only screen 
+and (max-device-width : 1000px)  { html { zoom:0.6; #4ac1c1; } }
+
+
+
+  body{ margin: 0; background-image: url('assests/1-1bg.png'); background-size: 100%; }
+  .container { width: 1024px;     margin: 0 auto; height: 768px;  position: relative; left: 0px; top: 0px; }
 
   .obj1 { max-width: 280px; margin-left: 15px; margin-right: 35px; margin-top: 20px; }
   .obj2 { max-width: 240px; margin-bottom: 100px; }
@@ -180,3 +190,5 @@ function compareSelected(){
 
 
 </script>
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
