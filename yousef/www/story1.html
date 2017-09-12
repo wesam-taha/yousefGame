@@ -8,6 +8,28 @@
 
 </head>
 <body ng-app="myApp" ng-controller="MyController" style="margin: 0 auto">
+
+<video style="position: absolute; top: -50000px;" class="myVideo" id="myVideo-1" width="100%"  preload="auto" autoplay="" poster="assests/story1.jpg" >
+  <source src="videos/1/1.mp4" type="video/mp4">
+</video>
+<video style="position: absolute; top: -50000px;" class="myVideo" id="myVideo-1" width="100%"  preload="auto" autoplay="" poster="assests/story1.jpg" >
+  <source src="videos/1/2.mp4" type="video/mp4">
+</video>
+<video style="position: absolute; top: -50000px;" class="myVideo" id="myVideo-1" width="100%"  preload="auto" autoplay="" poster="assests/story1.jpg" >
+  <source src="videos/1/3.mp4" type="video/mp4">
+</video>
+<video style="position: absolute; top: -50000px;" class="myVideo" id="myVideo-1" width="100%"  preload="auto" autoplay="" poster="assests/story1.jpg" >
+  <source src="videos/1/4.mp4" type="video/mp4">
+</video>
+<video style="position: absolute; top: -50000px;" class="myVideo" id="myVideo-1" width="100%"  preload="auto" autoplay="" poster="assests/story1.jpg" >
+  <source src="videos/1/5.mp4" type="video/mp4">
+</video>
+<video style="position: absolute; top: -50000px;" class="myVideo" id="myVideo-1" width="100%"  preload="auto" autoplay="" poster="assests/story1.jpg" >
+  <source src="videos/1/6.mp4" type="video/mp4">
+</video>
+
+
+
 <div class="container" style=" width: 100%; height: 100%;  position: relative; left: 0px; top: 0px;">
 <img id="loader" style=" position:relative;  width: 100%; left: 0px; top:0px;" src="assests/story1.jpg"/>
 
@@ -91,12 +113,12 @@ sampleApp.angular.controller('MyController', function($scope) {
 $scope.currentPage = 1;
 
 $scope.goPrev = function (){ 
-if($scope.currentPage > 1 && $scope.currentPage <= 6 ){ $scope.currentPage --;  $('#myVideo-'+$scope.currentPage)[0].play(); }
+if($scope.currentPage > 0 && $scope.currentPage <= 6 ){ $scope.currentPage --;  $('#myVideo-'+$scope.currentPage).currentTime = '0'; $('#myVideo-'+$scope.currentPage)[0].play(); }
 }
 
 
 $scope.goNext = function (){ 
-if($scope.currentPage < 6 && $scope.currentPage > 0 ){ $scope.currentPage ++ ;  $('#myVideo-'+$scope.currentPage)[0].play();  }
+if($scope.currentPage < 6 && $scope.currentPage > 0 ){ $scope.currentPage ++ ;  $('#myVideo-'+$scope.currentPage).currentTime = '0'; $('#myVideo-'+$scope.currentPage)[0].play();  }
 }
 
 
