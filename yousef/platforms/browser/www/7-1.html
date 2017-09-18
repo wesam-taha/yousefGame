@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=600,user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="css/drag.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script src="js/jquery.drag-drop.plugin.js"></script>
+    <script>
+        $(function() {
+                // First example, A-F.
+                $("#source1").dragdrop({
+                    makeClone: true,
+                    sourceHide: true,
+                    dragClass: "whileDragging",
+                    canDrag: function($src, event) {
+                        $src = $(event.target);
+                        return $src.hasClass("not") ? null:$src;
+                    },
+                    canDrop: function($dst) {
+                        return $dst.attr("id")=="destination" && $dst.children().size()<4;
+                    },
+                });
+
+                // Second example, G-L.
+                $("#source2").dragdrop({
+                    makeClone: true,
+                    sourceHide: true,
+                    dragClass: "whileDragging",
+                    canDrag: function($src, event) {
+                        $src = $(event.target);
+                        return $src.hasClass("not") ? null:$src;
+                    },
+                    canDrop: function($dst) {
+                        return $dst.attr("id")=="destination2" && $dst.children().size()<2;
+                    },
+                });
+
+
+
+            });
+        </script>
+        <style type="text/css">
+          .container { width: 1024px; height: 768px; background-image: url('assests/6-2-bg.png'); position: relative; left: 0px; top: 0px; }
+          .drop {
+            width: 282px;
+            height: 383px;
+            overflow: auto;
+            margin: auto;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 24pt;
+            font-weight: bold;
+            background-image: url(../assests/drop.png);
+            background-repeat: no-repeat;
+            background-position: 38px 150px;
+            position: relative;
+            right: -312px;
+            z-index: 999999 !important;
+            background-color: rgba(242, 242, 242, 0.5);
+            border-radius: 50px;
+        }
+
+        .drop2 {
+            width: 282px;
+            height: 383px;
+            overflow: auto;
+            margin: auto;
+            margin-top: -109px;
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 24pt;
+            font-weight: bold;
+            background-image: url(../assests/drop.png);
+            background-repeat: no-repeat;
+            background-position: 8px 150px;
+            position: absolute;
+            left: 50px;
+            z-index: 999999 !important;
+            background-color: rgba(242, 242, 242, 0.5);
+            border-radius: 50px;
+            top: 280px;
+        }
+
+        #destination { overflow: hidden; }
+        #destination img {
+            position: static !important;
+            left: 0px !important;
+            top: 0px !important;
+            width: 200px !important;
+            margin-right: -10px;
+            margin-bottom: -37px;
+        }
+
+        #destination2 { overflow: hidden; }
+        #destination2 img {
+            position: static !important;
+            left: 0px !important;
+            top: 0px !important;
+            width: 200px !important;
+            margin-right: -10px;
+            margin-bottom: -37px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div id="source1" class="source boxes">
+            <div><img style=" position: fixed; top: 206px; left:  500px; " src="assests/lamp.png"></div>
+            <div><img style=" position: fixed;top: 155px;left: 334px;  " src="assests/light.png"></div>
+
+        </div>
+        <div id="source2" class="source boxes">
+            <div><img style=" position: fixed; top: 400px; left:  450px; " src="assests/glass.png"></div>
+            <div><img style=" position: fixed; top: 340px; left:  345px;  " src="assests/checken.png"></div>
+
+
+        </div>
+        
+        <div id="destination" class="drop boxes" style="background-image: url('assests/night.png'); background-position: center; border-radius: 0px; ">
+        </div>
+
+        <div id="destination2" class="drop2 boxes" style="background-image: url('assests/day.png'); background-position: center; border-radius: 0px; ">
+        </div>
+
+    </div>
+</body>
+</html>
+

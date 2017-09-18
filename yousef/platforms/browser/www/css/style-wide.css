@@ -1,0 +1,103 @@
+@import url("https://codepen.io/MacEvelly/pen/iJGCw.css");
+
+
+body {
+    background-color: #fff;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+
+.holder{
+  width:1024px;
+  
+  padding: 0px; 
+  margin: 0px;
+  box-shadow: none;
+  overflow: auto;
+  max-width: 1024px;
+
+
+}
+
+.holder .held {
+    padding: 0px;
+
+    margin-top: 0px;
+    border: 0px;
+    box-shadow: none;
+    background-image: url('../assests/bg-4-2.gif'); background-size: cover;
+    background-position: cover;
+    width: 4095px;
+
+
+
+  }
+.held{
+
+  position:relative;
+  overflow:hidden;
+  box-shadow: none;
+
+}
+.button{
+  width:150px;
+  padding:10px;
+}
+
+#ActivityDIV .swatchHolder {
+    position: fixed;
+    bottom: 4%;
+    margin: auto;
+    left: 3%;
+    right: 0px;
+    list-style-type: none;
+    text-align: center;
+    display: inline-block;
+    padding: 0px;
+    width: 100%;
+    color: black;
+    /* float: left; */
+    /* max-width: 174px; */
+}
+#ActivityDIV .swatchHolder .colorHolder{
+  width:100%;
+  line-height: 100%;
+  content:'Chosen Color';
+  padding: 10px 0px;
+  margin: 0px auto 15px auto;
+  cursor:pointer;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+     -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+          box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+          float: left;
+}
+#ActivityDIV .swatchHolder li:not(.colorHolder){
+  height:25px;
+  width:25px;
+  margin:2px;
+  display:inline-block;
+  cursor:pointer;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+  box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+  float: left;
+}
+
+#ActivityDIV svg{
+  width:4000px;
+  display:inline-block;
+  min-height: 768px !important;
+  margin: 5px;
+  position: relative;
+  top: 180px;
+  float: left;
+}
+#ActivityDIV svg path{
+  cursor:pointer;
+}
