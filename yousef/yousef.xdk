@@ -1,0 +1,312 @@
+{
+  "project": {
+    "projectSettingsVersion": "3.0.0",
+    "creationData": {
+      "projectTypeName": "com.intel.xdk.projecttype.jsapp",
+      "src": "jsapp/template-blank-cordova-ad-project/sample.zip",
+      "projectGuid": "9cf76d4d-5b33-4664-a094-10780a0c5749",
+      "lastModifiedDate": 1506277178352,
+      "creationDate": 1506275449278
+    },
+    "sourceDirectory": "www",
+    "startFile": "index.html",
+    "projectFiles": {},
+    "projectDirectories": {},
+    "libraries": [],
+    "serviceMethods": [],
+    "cordovaPluginsDirectory": "plugins",
+    "cordovaPlugins": [
+      {
+        "id": "cordova-plugin-statusbar",
+        "version": "2.1.3",
+        "originType": "cordova.io",
+        "selectedState": "Included",
+        "name": "StatusBar",
+        "origin": "cordova-plugin-statusbar",
+        "data": {},
+        "paramvals": {},
+        "permissions": {},
+        "dependsOn": [],
+        "dependedBy": [],
+        "topLevel": true,
+        "checksum": "b1abbf98",
+        "gitref": "",
+        "cordovaVersion": ">=3.0.0",
+        "description": "Cordova StatusBar Plugin"
+      },
+      {
+        "id": "cordova-plugin-device",
+        "version": "1.1.2",
+        "selectedState": "Included",
+        "originType": "cordova.io",
+        "name": "Device",
+        "origin": "cordova-plugin-device",
+        "data": {},
+        "paramvals": {},
+        "permissions": {},
+        "dependsOn": [],
+        "dependedBy": [],
+        "topLevel": true,
+        "checksum": "1caca9d",
+        "gitref": "",
+        "description": "Cordova Device Plugin"
+      },
+      {
+        "id": "cordova-plugin-splashscreen",
+        "version": "3.2.2",
+        "selectedState": "Included",
+        "originType": "cordova.io",
+        "name": "Splashscreen",
+        "origin": "cordova-plugin-splashscreen",
+        "data": {},
+        "paramvals": {},
+        "permissions": {},
+        "dependsOn": [],
+        "dependedBy": [],
+        "topLevel": true,
+        "checksum": "2ccaa1ad",
+        "gitref": "",
+        "description": "Cordova Splashscreen Plugin"
+      }
+    ],
+    "buildConfigurations": {
+      "Android": {
+        "platform_": "android",
+        "runtime_": "Crosswalk with Cordova 3.x",
+        "name_": "Android",
+        "preferences_": {
+          "android-minSdkVersion": "19",
+          "android-targetSdkVersion": "21",
+          "android-installLocation": "auto",
+          "Fullscreen": false,
+          "Orientation": "landscape",
+          "android-signed": true
+        },
+        "isActive_": true,
+        "certificateId_": "Gc790i3ryEy6smkK5rywxA2",
+        "cordovaCLIVersion_": "6.2.0",
+        "crosswalkVersion_": "23",
+        "appName_": "Pondering Yousef",
+        "appID_": "com.yousef.game",
+        "appAccess_": {
+          "mode": "whitelist",
+          "network": [
+            "*"
+          ],
+          "intents": [
+            "http://*/*",
+            "https://*/*",
+            "tel:*",
+            "sms:*",
+            "mailto:*",
+            "geo:*",
+            "market:*"
+          ],
+          "navigation": []
+        },
+        "icons_": [
+          {
+            "density": "mdpi",
+            "relPath": "package-assets/48x48.png",
+            "width": 48,
+            "height": 48
+          },
+          {
+            "density": "hdpi",
+            "relPath": "package-assets/72x72.png",
+            "width": 72,
+            "height": 72
+          },
+          {
+            "density": "ldpi",
+            "relPath": "package-assets/36x36.png",
+            "width": 36,
+            "height": 36
+          },
+          {
+            "density": "xhdpi",
+            "relPath": "package-assets/96x96.png",
+            "width": 96,
+            "height": 96
+          }
+        ],
+        "splashes_": [
+          {
+            "relPath": "package-assets/320.png",
+            "density": "ldpi",
+            "height": 320,
+            "width": 426,
+            "orientation": "landscape"
+          },
+          {
+            "relPath": "package-assets/470.png",
+            "density": "mdpi",
+            "height": 320,
+            "width": 470,
+            "orientation": "landscape"
+          },
+          {
+            "relPath": "package-assets/mid.png",
+            "density": "hdpi",
+            "height": 480,
+            "width": 640,
+            "orientation": "landscape"
+          },
+          {
+            "relPath": "package-assets/big.png",
+            "density": "xhdpi",
+            "height": 720,
+            "width": 960,
+            "orientation": "landscape"
+          }
+        ],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.1",
+        "appVersionCode_": "1",
+        "appDescription_": "Pondering Yousef",
+        "appAuthor_": "Pondering Yousef"
+      },
+      "iOS": {
+        "platform_": "ios",
+        "runtime_": "Cordova 3.x",
+        "name_": "iOS",
+        "preferences_": {
+          "exit-on-suspend": false,
+          "deployment-target": "8.0",
+          "ios-configuration": "adhoc",
+          "Fullscreen": false,
+          "Orientation": "portrait"
+        },
+        "isActive_": false,
+        "certificateId_": "",
+        "cordovaCLIVersion_": "6.2.0",
+        "crosswalkVersion_": "23",
+        "appName_": "Intel XDK Template",
+        "appID_": "xdk.intel.template",
+        "appAccess_": {
+          "mode": "whitelist",
+          "network": [
+            "*"
+          ],
+          "intents": [
+            "http://*/*",
+            "https://*/*",
+            "tel:*",
+            "sms:*",
+            "mailto:*",
+            "geo:*",
+            "itms:*",
+            "itms-apps:*"
+          ],
+          "navigation": []
+        },
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "iosProvs_": [],
+        "appVersion_": "0.0.1",
+        "appVersionCode_": "1",
+        "appDescription_": "Intel XDK template",
+        "appAuthor_": "Intel XDK"
+      },
+      "Windows8": {
+        "platform_": "windows8",
+        "runtime_": "Cordova 3.x",
+        "name_": "Windows8",
+        "preferences_": {
+          "windows-publisher-display-name": "",
+          "windows-publisher-id": "",
+          "Fullscreen": false,
+          "Orientation": "portrait"
+        },
+        "isActive_": false,
+        "certificateId_": "",
+        "cordovaCLIVersion_": "6.2.0",
+        "crosswalkVersion_": "23",
+        "appName_": "Intel XDK Template",
+        "appID_": "xdk.intel.template",
+        "appAccess_": {
+          "mode": "whitelist",
+          "network": [
+            "*"
+          ],
+          "intents": [
+            "http://*/*",
+            "https://*/*",
+            "tel:*",
+            "sms:*",
+            "mailto:*",
+            "geo:*"
+          ],
+          "navigation": []
+        },
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.0.1",
+        "appVersionCode_": "1",
+        "appDescription_": "Intel XDK template",
+        "appAuthor_": "Intel XDK"
+      },
+      "WebApp": {
+        "platform_": "webapp",
+        "runtime_": "W3C",
+        "name_": "WebApp",
+        "preferences_": {},
+        "isActive_": false,
+        "certificateId_": "",
+        "appName_": "Intel XDK Template",
+        "appID_": "xdk.intel.template",
+        "appAccess_": {
+          "mode": "whitelist",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.1",
+        "appDescription_": "Intel XDK template",
+        "appAuthor_": "Intel XDK"
+      },
+      "Chrome": {
+        "platform_": "chromeos",
+        "runtime_": "W3C on Chrome OS",
+        "name_": "Chrome",
+        "preferences_": {},
+        "isActive_": false,
+        "certificateId_": "",
+        "appAccess_": {
+          "mode": "whitelist",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appName_": "Intel XDK Template",
+        "appID_": "xdk.intel.template",
+        "appVersion_": "0.0.1",
+        "appDescription_": "Intel XDK template",
+        "appAuthor_": "Intel XDK"
+      }
+    },
+    "gameAssetDirectory": "asset",
+    "gameMetadata": {},
+    "projectTags": [
+      "XDK-disallow-legacy-whitelist"
+    ],
+    "testDirectory": "test"
+  }
+}
