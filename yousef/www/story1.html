@@ -3,7 +3,7 @@
 <head>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
+<meta charset="UTF-8">
 
 </head>
 <body ng-app="myApp" ng-controller="MyController" style="margin: 0 auto">
@@ -12,76 +12,185 @@
 
 <div class="container" style=" background-image: url('assests/STORY-01.png'); background-size: cover; width: 100%; height: 100%;  position: absolute; background-position: left; left: 0px; top: 0px;">
 
-<div ng-show="currentPage == 1" class="myVideo" style="height: 300px; overflow: scroll;" id="myVideo-1" width="100%"  preload="auto" autoplay="" poster="assests/story1.jpg" >
-  <div class="en">
 
+
+
+
+
+<div  id="myVideo-1" width="100%"  preload="auto" autoplay="" poster="assests/story1.jpg" >
+  <div ng-if="lang == 'en' && noteOpen"  class="en myVideo" style="height: 330px;     background-color: rgba(20, 50, 76, 0.8); overflow: scroll; top: 35%;" >
+  While reading the training, educators & teachers should:
+<br>
+Pronounce words carefully and correctly for the child to understand each word.
+<br>
+Adhere to silence at full stop, a number of seven full stops (......). at each end of a situation, the educator should stop and count to seven then continue to read, this is required to enable the child to think and continue the educator's sentence with the correct words.
+<br>
+Assist the child while performing the enclosed educational faith training activities while taking into consideration the related interaction of the child for trying to completely solve the overall questions & activities.
+
+    <br>
+  </div>
+
+  <div ng-if="lang == 'ar' && noteOpen"  class="ar myVideo" style="height: 330px;     background-color: rgba(20, 50, 76, 0.8); overflow: scroll; top: 35%;">
+
+
+
+
+يقوم المربّي أو القائم على القراءة بـ:   <br> <br>
+- التأني في نطق الكلمات حتى يدركها الطّفل بصورتها السّليمة.   <br>   <br>
+- التقيّد بالسّكتة عند كل نقطة، وهناك سبع نقاط عند نهاية كل موقف، بمعنى السّكوت ثم العد من رقم سبعة (.......) حتى يتمكّن الطّفل من التّفكير والإجابة المطلبوبة ثم متابعة القراءة له.   <br> <br>
+- مساعدة الطّفل على القيام بالنّشاط المرفق بالتّدريب التربوي الإيماني والحرص على تفاعل الطّفل وذلك عند إجابته على جميع الأسئلة.   <br> <br>
+
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div ng-show="currentPage == 1"  id="myVideo-1" width="100%"  preload="auto" autoplay="" poster="assests/story1.jpg" >
+  <div ng-if="lang == 'en' && !noteOpen"  class="en myVideo" style="height: 330px; overflow: scroll; top: 35%;" >
 Yousef is a healthy, kind and a warm hearted child......., he is loved by everyone around him, at school, home and in the neighbourhood because he always helps people with a great smile.
-<br>
+ <br>
 Pondering Yousef lives in a very loving home....... with his father and his kind sister Mariyam.
-<br>
+ <br>
 Yousef's mother, lives with her parents to nurse her very ill father....... Yousef however, always remember his mother's advise about taking care of himself and his family, he does, because he obeys and respects his mother.
-<br>
+ <br>
 Yousef is different from other children his age, he ponders and deeply thinks about himself and his surroundings....... this is the reason for calling him Pondering Yousef to describe how much of a deep thinker is he at every situation and everywhere.
-<br>
+
+    <br>
+  </div>
+
+  <div ng-if="lang == 'ar' && !noteOpen"  class="ar myVideo" style="height: 330px; overflow: scroll; top: 35%;">
+
+يتمتّع الطّفل يوسف بصحّة جيّدة، وبنفس طيبّة........ يحبه الجميع من حوله في المدرسة والبيت والجيران، فهو يساعد النّاس دائماً بابتسامة تعلو وجهه.  <br>
+يعيش المتأمّل يوسف في منزل دافيء بالحبّ والحنان....... مع عائلته المكونة من الوالد الطّيب والأخت الحنون مريم، أمّا والدته فقد  ذهبت إلى منزل والديها للإعتناء بوالدها المريض....... يذكر يوسف دائماً كلامها له عن الاهتمام بنفسه وأسرته، ويعمل به طاعة واحترام لها.  <br>
+يتميّز يوسف عن بقيّة أقرانه من الأطفال في أنّه كثير التَأمّل والتفكير في نفسه وفي البيئة المحيطة به....... وأغلب والأوقات كانت كلمة «المتأمّل» تسبق اسمه كصفة له عند مناداته في كل مكان يذهب إليه.
 
   </div>
+
 </div>
 
-<div ng-show="currentPage == 2" class="myVideo" style="height: 18%; top: 45%;" id="myVideo-2" width="100%" poster="http://dummyimage.com/320x240/ffffff/fff" preload="auto"   >
-<div class="en">
-Yousef woke up in the morning with lots of energy ......., through his bedroom window, Yousef saw the colours of the rainbow in the sky  he was fascinated and started asking himself .... How do I see colours? ....
+<div ng-show="currentPage == 2"  id="myVideo-2" width="100%" poster="http://dummyimage.com/320x240/ffffff/fff" preload="auto"   >
+  <div ng-if="lang == 'en' && !noteOpen"  class="en myVideo" style="height:  27%; overflow: scroll; top: 41%;" >
+Yousef woke up in the morning with lots of energy ......., through his bedroom window, Yousef saw the colours of the rainbow in the sky; he was fascinated and started asking himself....... How do I see colours? .......
 
   </div>
-</div>
 
-<div ng-show="currentPage == 3" class="myVideo" style="height: 18%; top: 45%;" id="myVideo-3" width="100%" poster="http://dummyimage.com/320x240/ffffff/fff" preload="auto"   >
-<div class="en">
+  <div ng-if="lang == 'ar' && !noteOpen"  class="ar myVideo" style="height: 330px; overflow: scroll; top: 35%;" >
+ذهب المتأمل يوسف مع والده ليجالس صديقه الضرير على حديقة منزله، وعند وصوله رأى صديقه جالساً على كرسي الحديقة وبجانبه والده، فألقى التحية على صديقه ووالده فيحوهم بأحسن منها، وجلسوا جميعاً بالحديقة لأنّ الجو جميل، حيث العشب الأخضر اليانع، الزهور المختلفة الألوان، الشمس المشرقة والهواء النقي.
+ <br>
+أخذ يوسف يصف المكان لصديقه الضرير، فوافقه الرأي وهو لم يرى الأشياء التي وصفها له، واستمر صديقه في قوله: صحيح، صدقت يا صديق..  <br>
+فتعجب يوسف ...... وسكت فترة قصيرة
+فقال علي: ما بك يا صديقي «المتأمل يوسف» صامت ....... لا تتكلم!!!
 
-Yousef then further looked and mused over the colours of the rainbow for some time ...  While he was looking at the beautiful rage of colours he said to himself:
-<br>
-How do I see and choose the colours of my clothes? ....
 
 
   </div>
+
 </div>
 
-<div ng-show="currentPage == 4" class="myVideo" style="height: 23%; top: 45%;" id="myVideo-4" width="100%" poster="http://dummyimage.com/320x240/ffffff/fff" preload="auto"   >
-<div class="en">
+<div ng-show="currentPage == 3"  id="myVideo-3" width="100%" poster="http://dummyimage.com/320x240/ffffff/fff" preload="auto"   >
+  <div ng-if="lang == 'en' && !noteOpen"  class="en myVideo" style="height:  27%; overflow: scroll; top: 41%;" >
 
-Who has given us the blessing of sight? ....
-It's Allah.
+Yousef then further looked and mused over the colours of the rainbow for some time ……. While he was looking at the beautiful rage of colours he said to himself:
 <br>
-Allah has created eyes for us to ..... see. Allah has created ears for us to .... hear.
-<br>
-And Allah created lips for us to .... speak and say his Almighty name.
-<br>
+How do I see and choose the colours of my clothes? …….
+
+
+  </div>
+
+  <div ng-if="lang == 'ar' && !noteOpen"  class="ar myVideo" style="height: 330px; overflow: scroll; top: 35%;" >
+
+فأجاب يوسف: لماذا تقول كلمة «المتأمل» قبل اسم دائماً يا صديقي؟؟؟  <br>
+أجاب علي: <br>
+لأنك كثير التأمل والتفكير بالموجودات من حولك.
+فأنت يا عزيزي تتأمل دائماً بالأشياء من حولك، مما يجعلك تفكر ... وتفكر...
+وتسأل ..... وتسأل أحياناً نفسك.... وأحياناً أخرى أصدقائك.... <br>
+أكمل صديقه علي حديثه قائلاً: 
+إني أتمتع بمجالستك كثيراً، لأنك خير جليس،  <br>
+شكره يوسف على حسن كلامه، وسأله:  <br>
+كيف كل أن ترى العشب؟....
+وأن تري الزهور؟......
+وأن ترى الشمس مشرقة؟....
+
+
+
+
+  </div>
+
+
+</div>
+
+<div ng-show="currentPage == 4"  id="myVideo-4" width="100%" poster="http://dummyimage.com/320x240/ffffff/fff" preload="auto"   >
+  <div ng-if="lang == 'en' && !noteOpen"  class="en myVideo" style="height:  27%; overflow: scroll; top: 41%;" >
+
+Who has given us the blessing of sight?......
+It’s Allah.  <br>
+Allah has created eyes for us to ....... see. Allah has created ears for us to ....... hear.  <br>
+And Allah created lips for us to ....... speak and say his Almighty name.  <br>
 Allah created us.
 
+  </div>
+
+  <div ng-if="lang == 'ar' && !noteOpen"  class="ar myVideo" style="height: 330px; overflow: scroll; top: 35%;" >
+فأجاب علي مبتسماً: <br>
+بالنسبة إلى العشب فأني أشعر به عند ...... لمسه وعند ...... المشي عليه. <br>
+وأما الزهور فإني ...... أشم رائحتها الجميلة. <br>
+وعندما تشرق الشمس فإني لا أراها ولكني ...... أشعر بحرارتها. <br>
+وهذا الشعور يجعلني أعرف أي فصل من فصول السنة نحن الآن؟....
+نحن في فصل الربيع.....
+
 
   </div>
+
+
 </div>
 
-<div ng-show="currentPage == 5" class="myVideo" style="height: 24%; top: 45%;" id="myVideo-5" width="100%" poster="http://dummyimage.com/320x240/ffffff/fff"  preload="auto"   >
-<div class="en">
+<div ng-show="currentPage == 5"  id="myVideo-5" width="100%" poster="http://dummyimage.com/320x240/ffffff/fff"  preload="auto"   >
+  <div ng-if="lang == 'en' && !noteOpen"  class="en myVideo" style="height:  27%; overflow: scroll; top: 41%;" >
 
 That is why we should thank Allah, be grateful as long as we live and say
 : ....... Thank you Allah (AI Hamdu Lillah)
 <br>
-When we see and  .....  hear, ..... speak, ..... move, ..... eat and  ..... sleep. <br>
-we always say: Thank you Allah (AI Hamdu Lillah)
+When we see and ....... hear,.......speak,.......move,.......eat and  .......sleep. we always say: Thank you Allah (AI Hamdu Lillah)
 <br>
 
 AI Hamdu Lillah
+
 <br>
   </div>
+
+  <div ng-if="lang == 'ar' && !noteOpen"  class="ar myVideo" style="height: 330px; overflow: scroll; top: 35%;" >
+
+فقال المتأمل يوسف: <br>
+هذه نعمة من نعم الله تعالى، أنعمها علينا......
+نستطيع بحواسّنا أن نشعر بالأشياء من حولنا.... <br>
+ويجب علينا أن نشكر الله المنعم، الذي أنعم علينا الشعور... والإحساس بمن حولنا فالحمد لله
+والحمد لله .... أن خلقنا في أحسن صورة. <br>
+ويجب أن نقول دائماً: ....... <br>
+الحمد لله
+
+
+
+  </div>
+
+
 </div>
 
 
 
 
 
-<img ng-show="currentPage <= 5 && currentPage > 1" ng-click="goPrev()" style=" position: fixed; width: 7%; cursor: pointer; top: 33%; left: 1%;" src="assests/left.png">
-<img  ng-show="currentPage > 0 && currentPage < 5" ng-click="goNext()" style="position: fixed; width: 7%; cursor: pointer; top: 33%; right: 1%;" src="assests/right.png">
+<img ng-if="!noteOpen" ng-show="currentPage <= 5 && currentPage > 1" ng-click="goPrev()" style=" position: fixed; width: 7%; cursor: pointer; top: 33%; left: 1%;" src="assests/left.png">
+<img ng-if="!noteOpen"  ng-show="currentPage > 0 && currentPage < 5" ng-click="goNext()" style="position: fixed; width: 7%; cursor: pointer; top: 33%; right: 1%;" src="assests/right.png">
 
 
 
@@ -97,6 +206,13 @@ AI Hamdu Lillah
 <img onclick="showGames()" src="assests/game.png" style="position: fixed;z-index: 999;bottom: 0px;left: 200px;"></button>
 </a>
 
+
+
+<img ng-click="changeToAr()" ng-if="lang == 'en'" src="assests/arabic.png" style="width: 65px; position: fixed;z-index: 999;bottom: 10px;right: 10px;"></button>
+<img ng-click="changeToEn()" ng-if="lang == 'ar'" src="assests/english.png" style="width: 65px; position: fixed;z-index: 999;bottom: 10px;right: 10px;"></button>
+
+<img ng-if="!noteOpen" ng-click="toggleNote()"  src="assests/note.png" style="width: 65px; position: fixed;z-index: 999;bottom: 10px;right: 88px;"></button>
+<img ng-if="noteOpen"  ng-click="toggleNote()"  src="assests/note-off.png" style="width: 65px; position: fixed;z-index: 999;bottom: 10px;right: 88px;"></button>
 
 </div>
 </body>
@@ -118,8 +234,7 @@ AI Hamdu Lillah
 
 @font-face {
     font-family: 'walrusbold';
-    src: url('walrus-bold-webfont.woff2') format('woff2'),
-         url('walrus-bold-webfont.woff') format('woff');
+    src: url('walrus-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -136,15 +251,19 @@ and (max-device-width : 1000px)  { html { zoom:0.6; } }
 .container {    }
 .myVideo { background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
-  width: 70%;
+  width: 73%;
   height: 55%;
   z-index: 15;
   padding: 20px;
-  top: 30%;
-  left: 50%;
+  top: 26%;
+  left: 48.5%;
   margin: -10% 0 0 -37%;
    }
-.myVideo .en { font-size: 22px; color: #fff; font-family: 'Ubuntu'; }
+.en { font-size: 24px; line-height: 35px; color: #fff; font-family: 'Ubuntu'; }
+.ar {     font-size: 24px;
+    color: #fff;
+    font-family: 'walrusbold';
+    font-weight: 700; direction: rtl; text-align: right; }
 
 
 
@@ -168,6 +287,16 @@ sampleApp.angular = angular.module('myApp', [])
 
 sampleApp.angular.controller('MyController', function($scope) {
 $scope.currentPage = 1;
+$scope.lang = 'en';
+
+$scope.changeToEn = function (){ 
+$scope.lang = 'en';
+}
+
+
+$scope.changeToAr = function (){ 
+$scope.lang = 'ar';
+}
 
 $scope.goPrev = function (){ 
   if($scope.currentPage > 0 && $scope.currentPage <= 5 ){ 
@@ -176,6 +305,15 @@ $scope.goPrev = function (){
   'background-position-x': '-=20%',
 }, 1000, 'linear');
   }
+}
+
+
+
+$scope.toggleNote =  function() {
+
+  $scope.noteOpen = !$scope.noteOpen;
+
+
 }
 
 
